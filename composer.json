@@ -29,7 +29,8 @@
         "symfony/browser-kit": ">=2.7 <=4.2.4",
         "codeception/module-filesystem": "^1.0.0",
         "codeception/module-yii2": "^1.0.0",
-        "codeception/module-asserts": "^1.0.0"
+        "codeception/module-asserts": "^1.0.0",
+        "codeception/module-rest": "^1.2"
     },
     "config": {
         "process-timeout": 1800,
@@ -44,7 +45,8 @@
         "post-create-project-cmd": [
             "yii\\composer\\Installer::postCreateProject",
             "yii\\composer\\Installer::postInstall"
-        ]
+        ],
+        "test-api": "php vendor/bin/codecept run api"
     },
     "extra": {
         "yii\\composer\\Installer::postCreateProject": {
